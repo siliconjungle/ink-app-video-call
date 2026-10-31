@@ -1,0 +1,9 @@
+{
+  "commit": "5e077bee35255845efe4d45920a0abf6d82ea07f",
+  "files": {
+    "sdk.js": "f12bbfedf3d42022f58d03bc55911bed8a26de3e1249eac0e4df85672b262a08",
+    "desktop-keys.mjs": "22a9977622fc66bd6423a8267c49c4a88480387b2654b5fff3c7b336a67ba102",
+    "live-query.mjs": "bff9ae3322c41de933ae6e466b3189909aaf4e455a82b4056f03e5c9ab16c88a"
+  },
+  "distribution": "Bundled Ink OS SDK assets"
+}

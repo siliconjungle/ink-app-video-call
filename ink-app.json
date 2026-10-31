@@ -1,0 +1,34 @@
+{
+  "slug": "video-call",
+  "title": "Video Call",
+  "repository": "https://github.com/siliconjungle/ink-app-video-call",
+  "entry": "index.html",
+  "desktop": {
+    "entry": "video-call",
+    "icon": {
+      "svg": "icon.svg"
+    },
+    "window": {
+      "width": 1000,
+      "height": 680
+    }
+  },
+  "capabilities": [
+    "world.read",
+    "desktop.open",
+    "media.playback",
+    "media.call"
+  ],
+  "commands": [
+    {
+      "id": "devices",
+      "title": "Call device settings",
+      "description": "Choose microphone and camera devices.",
+      "inputs": [],
+      "handler": {
+        "type": "open"
+      }
+    }
+  ],
+  "commandsClient": "commands.mjs"
+}

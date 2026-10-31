@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Video Call</title><link rel="icon" href="icon.svg"><link rel="stylesheet" href="ink-ui/font.css"><link rel="stylesheet" href="style.css"><script src="sdk.js" defer></script><script type="module" src="boot.mjs"></script></head><body>
+<main class="call-app">
+<header><div class="app-title"><img src="icon.svg" alt="" width="22" height="22"><span>Video Call</span><span class="divider"></span><span class="space-label">This space</span></div><div class="connection"><span class="status-dot"></span><span id="status" role="status">Connecting to the space</span><time id="duration"></time></div></header>
+<section class="stage" aria-label="Call participants">
+<video id="remote" autoplay playsinline muted></video><audio id="remote-audio" autoplay hidden></audio>
+<div id="empty" class="empty"><div class="people-symbol"><span></span><span></span></div><h1 id="headline">A little closer.</h1><p id="description">A shared space for a face-to-face conversation.</p><div id="people" class="people" aria-label="People in this call"></div></div>
+<div id="remote-label" class="video-label" hidden><span id="remote-name"></span><span id="remote-muted"></span></div>
+<aside class="self-preview" aria-label="Your preview"><video id="local" autoplay playsinline muted></video><div id="self-avatar" class="self-avatar">Y</div><div class="self-label"><span>You</span><span id="local-muted"></span></div></aside>
+<div id="notice" class="notice" role="alert" hidden></div>
+<button id="play" class="play" hidden>Play call audio</button>
+</section>
+<footer><div class="footer-info"><span id="count">0 of 2 connected</span><small id="privacy">Camera and microphone are off</small></div><div class="controls">
+<button id="mic" class="control" aria-label="Turn microphone off" aria-pressed="true"><span class="glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/></svg></span><small>Mic</small></button>
+<button id="camera" class="control" aria-label="Turn camera off" aria-pressed="true"><span class="glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="13" height="14" rx="3"/><path d="m15 10 7-4v12l-7-4"/></svg></span><small>Camera</small></button>
+<button id="devices" class="control" aria-label="Choose devices" aria-expanded="false"><span class="glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="#151515"/><circle cx="16" cy="17" r="3" fill="#151515"/></svg></span><small>Devices</small></button>
+<span class="control-divider"></span><button id="join" class="join" disabled>Connecting…</button><button id="leave" class="leave" hidden aria-label="Leave call"><span class="glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15v-3c4-6 14-6 18 0v3l-5-1v-3M8 11v3l-5 1"/></svg></span><small>Leave</small></button>
+</div><div class="footer-end"><span id="transport">Direct connection</span><small>Only people in this space</small></div></footer>
+<div id="device-panel" class="device-panel" role="dialog" aria-label="Call devices" hidden><div class="device-heading">Devices<button id="close-devices" aria-label="Close devices">×</button></div><label>Microphone<select id="audio-input"><option value="">System default</option></select></label><label>Camera<select id="video-input"><option value="">System default</option></select></label><small>Your browser controls camera and microphone permission.</small></div>
+</main></body></html>
